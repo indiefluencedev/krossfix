@@ -13,6 +13,48 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/main.css" rel="stylesheet">
+    <style>
+      .video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+  
+      .video-bg iframe {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+  
+      .intros {
+        position: relative;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the darkness of the overlay */
+        z-index: 1;
+      }
+  
+      .intro-body {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
   </head>
   <body class="top" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Preloader (Optional)-->
@@ -179,7 +221,33 @@
         </div>
       </div>
     </nav>
-    <header class="intro" data-background="img/main/11.jpg">
+
+    <header class="intros" id="video-header">
+      <div class="video-bg">
+        <iframe src="https://www.youtube.com/embed/yJg-Y5byMMw?controls=0&autoplay=1&mute=1&loop=1&playlist=yJg-Y5byMMw&showinfo=0&modestbranding=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="overlay"></div>
+      <div class="intro-body">
+        <div class="container text-left">
+          <div class="row">
+            <div class="col-md-2 col-lg-offset-3 text-center">
+              <img class="logolanding" src="img/logo.png" alt="">
+            </div>
+            <div class="col-md-6">
+              <h1 class="no-pad bold">KrossFix <br><span class="light">Bond For Life</span></h1>
+              <a class="page-scroll" href="#about">
+                <span class="mouse">
+                  <span>
+                    <i class="ion-ios-arrow-thin-down"></i>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- <header class="intro" data-background="./img/demo/11.jpg">
       <div class="intro-body">
         <div class="overlay"></div>
         <div class="container text-left">
@@ -192,7 +260,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <!-- Teaser-->
     <!-- <div class="container text-center box-shadow showcase">
       <div class="row">
@@ -377,7 +445,7 @@
     <div class="container text-center box-shadow offcet showcase">
       <div class="row v-center">
         <div class="col-lg-6"><img class="img-responsive center-block" src="./img/misc/4000.jpg" alt="" height="400px" width="400px" ></div>
-        <div class="col-lg-6"><a class="swipebox-video" href="https://vimeo.com/188716447" data-rel="video2"><i class="ion-ios-play-outline icon-big text-gradient-gray"></i></a>
+        <div class="col-lg-6"><a class="swipebox-video" href="https://youtu.be/yJg-Y5byMMw?si=_piiKK1DsfnO_mti188716447" data-rel="video2"><i class="ion-ios-play-outline icon-big text-gradient-gray"></i></a>
           <h2>Watch Our Story</h2>
           <h5 class="no-pad">Youtube / Vimeo</h5>
         </div>
@@ -387,12 +455,12 @@
 
 
 
-
+<!-- 
     <section>
       <div class="container-fluid text-center wow fadeIn">
         <div class="intro-body">
           <h1>Meet The Team</h1>
-          <!-- <h4>Meet our leaders</h4> -->
+          
         </div>
         <div class="row">
           <div class="col-md-2 col-md-offset-1 col-sm-6">
@@ -452,7 +520,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   
     <!-- Slider-->
     <section class="section-small section-offcet bg-gray">
@@ -471,8 +539,8 @@
                 <li data-target="#carousel-light2" data-slide-to="1"></li>
               </ol>
               <div class="carousel-inner" role="listbox">
-                <div class="item active"><img class="center-block" src="img/misc/11.png" alt=""></div>
-                <div class="item"><img class="center-block" src="img/misc/10.png" alt=""></div>
+                <div class="item active"><img class="center-block-2" src="img/misc/11.png" alt=""></div>
+                <div class="item"><img class="center-block-2" src="img/misc/10.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -484,35 +552,18 @@
     
    
     <!-- Testimonials Section-->
-    <section id="testimonials">
+    <!-- <section id="testimonials">
       <div class="container">
         <div class="row">
           <div class="col-md-3">
             <h2>Testimonials</h2>
           </div>
-          <!-- <div class="col-md-3"><img class="center-block img-responsive" src="img/testimonials/5.jpg" alt=""></div>
-          <div class="col-md-6">
-            <h2 class="dark-gray">One of the best coded templates in <a href="https://themeforest.net/user/forbetterweb/portfolio">Themeforest</a>
-            </h2>
-            <p>Fantastic template, еverything is perfectly divided en section modules, you can mix items form any page and they work perfectly. Great customer support, very fast and helpful! Great quality design.</p>
-            <div class="classic">Lily Rothman</div> <small>&mdash; Vault Mechanics</small>
-          </div> -->
+         
         </div>
         <div class="row grid-pad">
           <div class="col-md-3"><img class="center-block img-responsive" src="img/testimonials/1.jpg" alt="">
             <h4>Richard Kindall</h4>
             <p class="no-pad">This theme has everything you need. If you're looking for a well designed, well coded theme - you're search ends right here!</p>
-
-
-
-
-
-
-
-
-
-
-            
 
           </div>
           <div class="col-md-3"><img class="center-block img-responsive" src="img/testimonials/2.jpg" alt="">
@@ -529,7 +580,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     
    
   
