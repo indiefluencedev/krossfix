@@ -13,48 +13,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/main.css" rel="stylesheet">
-    <style>
-      .video-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
-      }
-  
-      .video-bg iframe {
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-      }
-  
-      .intros {
-        position: relative;
-        height: 100vh;
-        color: white;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-  
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adjust the darkness of the overlay */
-        z-index: 1;
-      }
-  
-      .intro-body {
-        position: relative;
-        z-index: 2;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/video.css">
+    <link rel="stylesheet" href="./css/products.css">
   </head>
   <body class="top" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Preloader (Optional)-->
@@ -80,152 +40,8 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-            <li><a href="index.html">Home <span class="caret"></span></a>
-              <!-- <ul class="dropdown-menu columns-3">
-                <li><strong class="text-muted">demos</strong></li>
-                <li><a href="indexslider.html">main demo</a></li>
-                <li><a href="indexvideo.html">main demo video <span class="label label-danger">new</span></a></li>
-                <li><a href="indexagency.html">creative agency</a></li>
-                <li><a href="indexapp.html">application</a></li>
-                <li><a href="indexpersonal.html">personal / freelancer</a></li>
-                <li><a href="indexpersonal2.html">personal / freelancer 2</a></li>
-                <li><a href="indexportfolio.html">agency portfolio <span class="label label-danger">new</span></a></li>
-                <li><a href="indexportfolio2.html">digital Artist / photographer</a></li>
-                <li><a href="indexcar.html">auto showroom</a></li>
-                <li><a href="indexconstruction.html">construction / renovation</a></li>
-                <li><a href="indexbarber.html">salon / stylist <span class="label label-danger">new</span></a></li>
-                <li><a href="indexspa.html">spa / therapy</a></li>
-                <li><a href="indexarchdesign.html">architecture & design</a></li>
-                <li><a href="indexcafe.html">café / restaurant</a></li>
-                <li><a href="indexevent.html">events <span class="label label-danger">new</span></a></li>
-                <li><strong class="text-muted">landing pages</strong></li>
-                <li><a href="landing.html">landing page</a></li>
-                <li><a href="landing2.html">landing page 2 <span class="label label-danger">new</span></a></li>
-                <li><a href="landingdark.html">landing page dark</a></li>
-                <li><strong class="text-muted">one page demos</strong></li>
-                <li><a href="indexparallax-one.html">one page / main demo</a></li>
-                <li><a href="indexvideo-one.html">full screen video</a></li>
-                <li><a href="indexvideo2-one.html">full screen video 2</a></li>
-                <li><a href="indexagency-one.html">creative agency</a></li>
-                <li><a href="indexportfolio-one.html">agency portfolio</a></li>
-                <li><a href="indexdark-one.html">one dark</a></li>
-                <li><a href="indexkenburns-one.html">ken burns slider</a></li>
-                <li><a href="indexkenburns2-one.html">ken burns slider 2</a></li>
-                <li><a href="indexsolidcolor-one.html">minimal solid color</a></li>
-                <li><strong class="text-muted">coming soon & countdown</strong></li>
-                <li><a href="comingsoon.html">landing coming soon</a></li>
-                <li><a href="comingsoon2.html">coming soon canvas <span class="label label-danger">new</span></a></li>
-                <li><a href="comingsoon3.html">coming soon canvas 2</a></li>
-                <li><a class="btn-nav" href="index.html"><span class="btn btn-dark btn-sm">More Demos</span></a></li>
-              </ul> -->
-            </li>
-            <li><a href="contact2.html">Contact us <span class="caret"></span></a>
-              <!-- <ul class="dropdown-menu">
-                <li><a href="about.html">about us 1</a></li>
-                <li><a href="about2.html">about us 2</a></li>
-                <li><a href="contact.html">contact us 1</a></li>
-                <li><a href="contact2.html">contact us 2 <span class="label label-danger">new</span></a></li>
-                <li><a href="partners.html">clients</a></li>
-                <li><a href="team.html">team</a></li>
-                <li><a href="services.html">services</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register-login.html">Register/Login</a></li>
-                <li><a href="faq.html">faq</a></li>
-                <li><a href="404.html">error 404</a></li>
-              </ul> -->
-            </li>
-            <!-- <li><a href="#">Portfolio <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Masonry <span class="angle-right"></span><span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="portfolio-masonry-2.html">2 columns</a></li>
-                    <li><a href="portfolio-masonry-3.html">3 columns</a></li>
-                    <li><a href="portfolio-masonry-4.html">4 columns</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Wide <span class="angle-right"></span><span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="portfolio-wide-2.html">2 columns</a></li>
-                    <li><a href="portfolio-wide-3.html">3 columns</a></li>
-                    <li><a href="portfolio-wide-4.html">4 columns</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Boxed <span class="angle-right"></span><span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="portfolio-boxed-2.html">2 columns</a></li>
-                    <li><a href="portfolio-boxed-3.html">3 columns</a></li>
-                    <li><a href="portfolio-boxed-4.html">4 columns</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Single project</a></li>
-              </ul>
-            </li> -->
-            <!-- <li><a href="#">News <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="news2.html">2 columns</a></li>
-                <li><a href="news2-sidebar.html">2 columns sidebar</a></li>
-                <li><a href="news3.html">3 columns</a></li>
-                <li><a href="news4.html">4 columns</a></li>
-                <li><a href="news-single.html">single fullwidth</a></li>
-                <li><a href="news-single-sidebar.html">single sidebar</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Elements <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="headers.html"><i class="fa fa-server fa-lg fa-fw"></i> Headers & Page titles</a></li>
-                <li><a href="buttons.html"><i class="fa fa-hand-pointer fa-lg fa-fw"></i> Buttons</a></li>
-                <li><a href="carousels.html"><i class="fa fa-clone fa-lg fa-fw"></i> Carousels</a></li>
-                <li><a href="columns.html"><i class="fa fa-th-list fa-lg fa-fw"></i> Columns <span class="label label-primary">update</span></a></li>
-                <li><a href="pricing.html"><i class="fa fa-credit-card fa-lg fa-fw"></i> Pricing tables</a></li>
-                <li><a href="countdown.html"><i class="fa fa-clock fa-lg fa-fw"></i> Countdown Timer</a></li>
-                <li><a href="bars-charts.html"><i class="fa fa-chart-pie fa-lg fa-fw"></i> Bars and Charts</a></li>
-                <li><a href="animate-on-scroll.html"><i class="fa fa-chevron-down fa-fw"></i> Animate On Scroll</a></li>
-                <li><a href="typography.html"><i class="fa fa-text-width fa-lg fa-fw"></i> Typography</a></li>
-                <li><a href="accordions.html"><i class="fa fa-plus-square fa-lg fa-fw"></i> Accordions</a></li>
-                <li><a href="video-sound.html"><i class="fa fa-video fa-lg fa-fw"></i> Video / Sound</a></li>
-                <li><a href="tabs.html"><i class="fa fa-columns fa-lg fa-fw"></i> Tabs</a></li>
-              </ul>
-            </li>
-            <li class="menu-divider visible-lg">&nbsp;</li>
-            <li><a href="#">Shop <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="shop2.html">Shop sidebar</a></li>
-                <li><a href="shop3.html">Shop  sidebar  wide</a></li>
-                <li><a href="shop-single.html">Single product</a></li>
-                <li><a href="shop-cart.html">Shopping cart</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" href="#"><i class="fa fa-shopping-cart fa-lg"></i><span class="badge">3</span><span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="shop-nav">
-                  <div class="shop-cart"><a href="shop-cart.html"><img src="img/shop/1.jpg" alt=" ">
-                      <div class="btn-dark-border btn btn-xs">$128.99</div><i class="fa fa-times float-right"></i><br>Jacket with contrasting hood</a></div>
-                </li>
-                <li class="shop-nav">
-                  <div class="shop-cart"><a href="shop-cart.html"><img src="img/shop/2.jpg" alt=" ">
-                      <div class="btn-dark-border btn btn-xs">$186.99</div><i class="fa fa-times float-right"></i><br>Jacket with a seam on the lapel</a></div>
-                </li>
-                <li class="shop-nav">
-                  <div class="shop-cart"><a href="shop-cart.html"><img src="img/shop/3.jpg" alt=" ">
-                      <div class="btn-dark-border btn btn-xs">$98.99</div><i class="fa fa-times float-right"></i><br>Faux leather jacket</a></div><span class="text-left">Subtotal:</span><span class="float-right"><b>$386.99</b></span>
-                </li>
-                <li><a href="shop-cart.html"><span class="btn btn-dark-border btn-sm">Checkout</span></a></li>
-              </ul>
-            </li>
-            <li class="visible-lg">&nbsp;</li>
-            <li class="dropdown"><a class="dropdown-toggle" href="#"><i class="fa fa-globe fa-lg"></i> English<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/">English</a></li>
-                <li><a href="/">Español</a></li>
-                <li><a href="/">Deutsch</a></li>
-                <li><a href="/">Français</a></li>
-                <li><a href="/">Русский</a></li>
-                <li><a href="/">日本語</a></li>
-                <li><a href="/">中文(简体)</a></li>
-              </ul>
-            </li> -->
+            <li><a href="index.html">Home <span class="caret"></span></a></li>
+            <li><a href="contact2.html">Contact us <span class="caret"></span></a></li>
           </ul>
         </div>
       </div>
@@ -240,39 +56,7 @@
       <div class="intro-body">
       </div>
     </header>
-    <!-- <header class="intro" data-background="./img/demo/11.jpg">
-      <div class="intro-body">
-        <div class="overlay"></div>
-        <div class="container text-left">
-          <div class="row">
-            <div class="col-md-2 col-lg-offset-3 text-center"><img class="logolanding" src="img/logo.png" alt=""></div>
-            <div class="col-md-6">
-              <h1 class="no-pad bold">KrossFix <br><span class="light">Bond For Life</span>
-              </h1><a class="page-scroll" href="#about"><span class="mouse"><span><i class="ion-ios-arrow-thin-down"></i></span></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header> -->
-    <!-- Teaser-->
-    <!-- <div class="container text-center box-shadow showcase">
-      <div class="row">
-        <div class="col-lg-4">
-          <h3><i class="ion-ios-analytics-outline icon-big"></i> Easy to Use</h3>
-          <p class="no-pad">Clean & fully commented code and a stunning documentation make it very easy to use</p>
-        </div>
-        <div class="col-lg-4 border">
-          <h3><i class="ion-ionic icon-big fa-spin"></i>
-           Dead simple
-          </h3>
-          <p class="no-pad">Very lightweight, easy to use and fast loading code. Clean design focused on good readability.</p>
-        </div>
-        <div class="col-lg-4">
-          <h3><i class="ion-ios-stopwatch-outline icon-big"></i> Coder friendly</h3>
-          <p class="no-pad">With the Concept template you can create professional and beautiful business or personal website.</p>
-        </div>
-      </div>
-    </div> -->
+
     <!-- About Section-->
     <section class="showcase section-small" id="about">
       <div class="container">
@@ -293,84 +77,8 @@
 
 <!-- gallery -->
 <section class="bg-dark2 no-pad-btm" id="portfolio">
-  <div class="container-fluid text-center">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-        <h2>Gallery</h2>
-      
-      </div>
-    </div>
-    <div class="row portfolio-items" id="grid">
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/0.jpeg" alt="">
-            <div class="portfolio-overlay">
-             
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/1.jpeg" alt="">
-            <div class="portfolio-overlay">
-             
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;people&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/2.jpg" alt="">
-            <div class="portfolio-overlay">
-             
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;people&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/3.jpeg" alt="">
-            <div class="portfolio-overlay">
-            
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/4.jpeg" alt="">
-            <div class="portfolio-overlay">
-            
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/5.jpeg" alt="">
-            <div class="portfolio-overlay">
-         
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/6.jpeg" alt="">
-            <div class="portfolio-overlay">
-              
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/7.jpeg" alt="">
-            <div class="portfolio-overlay">
-             
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;people&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/8.jpeg" alt="">
-            <div class="portfolio-overlay">
-              
-            </div></a></div>
-      </div>
-      <div class="col-sm-4 no-pad" data-groups="[&quot;people&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/9.jpeg" alt="">
-            <div class="portfolio-overlay">
-            
-            </div></a></div>
-      </div>
-   
-      <div class="col-sm-4 no-pad" data-groups="[&quot;branding&quot;]">
-        <div class="portfolio-item"><a href="#"><img src="./img/main/11.jpeg" alt="">
-            <div class="portfolio-overlay">
-              
-            </div></a></div>
-      </div>
-      
-    </div>
-  </div>
+  
+  
 </section>
    
     <!-- Services Section-->
@@ -406,57 +114,6 @@
       </div>
     </section>
 
-
-    <!-- products -->
-     <section id="team">
-
-      <div class="container text-center">
-        <h2>Products</h2>
-        <div class="row">
-          <div class="col-md-6 shadow  team-member">
-            <img class="img-responsive center-block" src="img/team/avatar3.jpg" alt="">
-            <div class="info">
-              <h5>Solvent-Based Products</h5>
-              <p>This range includes cleaners, primers, adhesives and hardners. Designed for high-strength bonding, our solvent-based products offer exceptional durability and ease of use for various footwear applications.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6  team-member">
-                <img class="img-responsive center-block" src="img/team/avatar2.jpg" alt="">
-                <div class="info">
-                  <h5 class="product-head">Water-Based Primers and Adhesives</h5>
-                  <p class="product-text">Our water-based primers and adhesives are available in both 1-component and 2-component solutions, providing a safe and eco-friendly alternative with excellent bonding properties.</p>
-                </div>
-              </div>
-              <div class="col-md-6  team-member">
-                <img class="img-responsive center-block" src="img/team/avatar1.jpg" alt="">
-                <div class="info">
-                  <h5 class="product-head">Hotmelt Adhesives</h5>
-                  <p class="product-text">Our PUMELT adhesive technology offers a sustainable solution to replace traditional solvent-based adhesives. These hotmelt adhesives ensure strong, flexible bonds and increased efficiency in the manufacturing process.</p>
-                </div>
-              </div>
-              <div class="col-md-6  team-member">
-                <img class="img-responsive center-block" src="img/team/avatar4.jpg" alt="">
-                <div class="info">
-                  <h5 class="product-head">BTX-Free Adhesives</h5>
-                  <p class="product-text">Prioritizing safety and sustainability, our BTX-free solvent-based cleaners, primers, and adhesives are free from harmful benzene, toluene, and xylene, ensuring a safer work environment without compromising on performance.</p>
-                </div>
-              </div>
-              <div class="col-md-6  team-member">
-                <img class="img-responsive center-block" src="img/team/avatar5.jpg" alt="">
-                <div class="info">
-                  <h5 class="product-head">Cyanoacrylate Adhesives</h5>
-                  <p class="product-text">Ideal for quick repairs and precise applications, our cyanoacrylate adhesives provide instant bonding and exceptional strength for various shoe components.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-    </section>
     <!-- Action video-->
     <div class="container text-center box-shadow offcet showcase">
       <div class="row v-center">
@@ -468,6 +125,56 @@
       </div>
     </div>
 
+
+  <!-- products-->
+  <div class="container">
+    <h1>Our Products</h1>
+    <div class="tint">
+    <div class="grid-container">
+        <div class="grid-item img-large">
+            <img src="./img/main/10.jpeg" alt="Image 1">
+            <div class="overlay">
+              <h3 class="first-image"> Solvent-Based Products</h3>
+              <p>This range includes cleaners, primers, adhesives and hardners. Designed for high-strength bonding, our solvent-based products offer exceptional durability and ease of use for various footwear applications.
+              </p>
+            
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="./img/main/10.jpeg" alt="Image 2">
+            <div class="overlay">
+              <h3 > Water-Based Primers and Adhesives </h3>
+              <p>Our water-based primers and adhesives are available in both 1-component and 2-component solutions, providing a safe and eco-friendly alternative with excellent bonding properties.
+              </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="./img/main/10.jpeg" alt="Image 3">
+            <div class="overlay">
+              <h3>Hotmelt Adhesives</h3>
+              <p>Our PUMELT adhesive technology offers a sustainable solution to replace traditional solvent-based adhesives. These hotmelt adhesives ensure strong, flexible bonds and increased efficiency in the manufacturing process.
+              </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="./img/main/10.jpeg" alt="Image 4">
+            <div class="overlay">
+              <h3>BTX-Free Adhesives</h3>
+              <p>Prioritizing safety and sustainability, our BTX-free solvent-based cleaners, primers, and adhesives are free from harmful benzene, toluene, and xylene, ensuring a safer work environment without compromising on performance.
+              </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="./img/main/10.jpeg" alt="Image 5">
+            <div class="overlay">
+              <h3> Cyanoacrylate Adhesives</h3>
+              <p>Ideal for quick repairs and precise applications, our cyanoacrylate adhesives provide instant bonding and exceptional strength for various shoe components.
+              </p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
 
 
 
